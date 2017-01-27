@@ -1,5 +1,7 @@
 <?php
 
+//DO NOT USE 
+//Vulnerable to SQLInjection hacks
 class BaseModel extends ApiModel
 {
     protected $sql;
@@ -22,30 +24,7 @@ class BaseModel extends ApiModel
         }
         return $this->sql;
     }
-/*
-    public function postModel($data) {
-        $sql = "INSERT INTO clips (name, title, description, thumbnail, link, duration)
-                VALUES (':name', ':title', ':description', ':thumbnail', ':link', ':duration')";
-        $stmt = $this->connection->prepare($sql);
-        if($stmt == false) {
-            echo "fasle";
-            throw new Exception(print_r($stmt->errorInfo(),1).PHP_EOL.$sql);
-        }
-        foreach($array as $data) {
-            $values = array(
-                ':name'        => $data['title'],
-                ':description' => $data['description'],
-                ':thumbnail'   => $data['thumbnail'],
-                ':link'        => $data['link'],
-                ':duration'    => $data['duration']
-            );
-            if($stmt->execute($values) == false) {
-                echo "false";
-                throw new Exception(print_r($stmt->errorInfo(),1).PHP_EOL.$sql);
-            }
-        }
-    }
-*/
+
     public function postModel($data)
     {
         $sql = "INSERT INTO actions VALUES (".$data['name'].")";

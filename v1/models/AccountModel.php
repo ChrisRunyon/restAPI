@@ -27,7 +27,6 @@ class AccountModel extends ApiModel
                 $this->entity = new AccountEntity();
                 $this->stripeManager = new StripeManager($this->entity);
                 $stripeAccount = $this->stripeManager->createStripeManagedAccount();
-                echo $stripeAccount;
                 $this->entity->mapData($params);
                 $this->sql = $this->entity->getInsertSql();
                 $this->data = $this->entityManager->setEntityPreflight($this->entity);

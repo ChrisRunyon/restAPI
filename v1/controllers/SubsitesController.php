@@ -17,9 +17,9 @@ class SubsitesController extends ApiController {
 
     /* /Users */
     /* Sample api calls:
-        http://rest.gander.tv/subsites/musics --> return json array for this subsite
-        http://rest.gander.tv/subsites/musics/ads/leaderboard  --> return leaderboard ad tag
-        http://rest.gander.tv/subsites/musics/ads/all --> return all four ad tags
+        http://rest.localhost.tv/subsites/musics --> return json array for this subsite
+        http://rest.localhost.tv/subsites/musics/ads/leaderboard  --> return leaderboard ad tag
+        http://rest.localhost.tv/subsites/musics/ads/all --> return all four ad tags
     */
     /**
     * REST GET Action
@@ -95,7 +95,7 @@ class SubsitesController extends ApiController {
         /* subsites/musics */
         if(isset($request->url_elements[2])) {
 
-            /* Sample call: http://rest.gander.tv/substies/musics/ads/edit */
+            /* Sample call: http://localhost/substies/musics/ads/edit */
             if(isset($request->url_elements[3]) && $request->url_elements[3] != 'create' && $request->url_elements != 'upload') {
 
                 $subsite = $request->url_elements[2];
@@ -119,7 +119,7 @@ class SubsitesController extends ApiController {
                         break;
                 }
             }
-            /* Sample call: http://rest.gander.tv/substies/musics/create  */
+            /* Sample call: http://rest.localhost.tv/substies/musics/create  */
             else {
 
                 $subsite = $request->url_elements[2];

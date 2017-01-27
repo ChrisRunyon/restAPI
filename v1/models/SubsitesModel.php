@@ -1,5 +1,7 @@
 <?php
 
+//DO NOT USE
+//Vulnerable to SQLInjection hacks
 class SubsitesModel extends ApiModel
 {
 

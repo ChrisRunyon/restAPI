@@ -4,7 +4,7 @@
 
 /*
 $a = $_SERVER['HTTP_ORIGIN'];
-if($a != "http://devclient.gander.tv" && $a != "http://sobs.tv"){
+if($a != "http://devclient.localhost.tv" && $a != "http://sobs.tv"){
     header("HTTP/1.0 403 Forbidden");
     exit;
 }
@@ -17,7 +17,7 @@ $host = $matches[1];
 
 // get last two segments of host name
 preg_match('/[^.]+\.[^.]+$/', $host, $matches);
-if($host !='admin.gander.tv' && $matches[0] != "gander.tv" && $matches[0] != "sobs.tv" && $matches[0]!= "bkbazaar.tv"){
+if($host !='admin.localhost.tv' && $matches[0] != "localhost.tv" && $matches[0] != "sobs.tv" && $matches[0]!= "bkbazaar.tv"){
     header("HTTP/1.0 403 Forbidden");
     exit;
 }*/

@@ -45,7 +45,7 @@ class AdduserController extends ApiController {
                     exit;
                     $connection->close();
                     break;
-                /* controller login to gander main site */
+                /* controller login to localhost main site */
                 case 'admin':
                     echo "login to user main site, build later.";
                     break;
@@ -53,7 +53,7 @@ class AdduserController extends ApiController {
                     break;
             }
         } else {
-           echo "Please choose a login type. (admin/gander)";
+           echo "Please choose a login type. (admin/localhost)";
         }
         //return $data;
     }

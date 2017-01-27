@@ -76,8 +76,8 @@ class EventModel extends ApiModel
             header('WWW-Authenticate: OAuth realm="not signed"');
             header('Content-Type: text/plain; charset=utf8');
 
+            //useful for debugging
             //$headers = apache_request_headers();
-
             //foreach ($headers as $header => $value) {
             //    echo "$header: $value <br />\n";
             //}

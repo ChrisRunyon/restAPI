@@ -9,7 +9,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/vendor/autoload.php');
 
 
 /*
- * Extends MySQLi
+ * Extends PDO
  * Don't extend this class directly
  * Use ApiModel.php to access this class
  */
