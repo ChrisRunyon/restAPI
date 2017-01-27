@@ -6,6 +6,7 @@
  * Time: 12:10 AM
  */
 
+//Iterate and echo out openssl methods for reference
 for ($i = 0; $i <= 24; $i++) {
     $method = openssl_get_md_methods()[$i];
 
