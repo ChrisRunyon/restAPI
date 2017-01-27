@@ -5,6 +5,7 @@ abstract class ApiController {
     public function __construct() {
     }
 
+    //Needed for CORS preflight request
     public function optionsAction() {
         header("Access-Control-Allow-Origin: *");
         header("Access-Control-Max-Age: 1000");

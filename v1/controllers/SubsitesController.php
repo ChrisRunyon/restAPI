@@ -80,7 +80,7 @@ class SubsitesController extends ApiController {
                 $connection->close();
             }
         } else {
-            $data['message'] = "Please specify a subsite.";
+            $data['message'] = "Please specify a subsite";
         }
         return $data;
     }

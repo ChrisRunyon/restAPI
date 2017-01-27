@@ -80,12 +80,12 @@ class PasswdMgrController extends ApiController {
                         break;
                 }
             } else {
-                //$data['message'] = "here is the info for user " . $userId;
+                $data['message'] = "no valid userid provided: " . $userId;
             }
         }
         else
         {
-            $data['message'] = "you want a list of credentials";
+            $data['message'] = "you want a list of credentials?";
         }
         return $data;
     }

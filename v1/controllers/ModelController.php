@@ -52,7 +52,7 @@ class ModelController extends ApiController {
                         $this->response = $this->model->postModel($action, $params);
                     } else {
                         header('HTTP/1.1 400 Bad Request');
-                        header('Content-Type: text/plain line 55');
+                        header('Content-Type: text/plain');
                     }
                     break;
                 case 'update':
@@ -60,7 +60,7 @@ class ModelController extends ApiController {
                         $this->response = $this->model->postModel($action, $params);
                     } else {
                         header('HTTP/1.1 400 Bad Request');
-                        header('Content-Type: text/plain line 55');
+                        header('Content-Type: text/plain');
                     }
                     break;
                 default:

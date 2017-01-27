@@ -32,7 +32,6 @@ class EventsController extends ApiController {
             switch ($action) {
                 case 'all':
                     $this->response = $this->model->postModel($action);
-
                     break;
                 default:
                     header('HTTP/1.1 400 Bad Request');
