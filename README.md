@@ -51,4 +51,3 @@ Uploader/			POST
 User/profile		GET
 
 User/create			POST
-
