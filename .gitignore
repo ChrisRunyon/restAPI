@@ -1,0 +1,5 @@
+vendor
+composer.old
+scrap.sql
+phing-latest.phar
+index.html
