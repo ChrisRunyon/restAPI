@@ -1,7 +1,0 @@
-{
-  "require": {
-    "stripe/stripe-php": "1.*",
-    "apache/log4php": "2.3.0",
-    "zorrodg/oauth-php": "dev-master"
-  }
-}
