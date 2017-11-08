@@ -3,7 +3,7 @@
 require_once(__DIR__ . '/ApiController.php');
 require_once($_SERVER['DOCUMENT_ROOT'].'/vendor/autoload.php');
 
-class AssetController extends ApiController {
+class HomeController extends ApiController {
 
     protected $model;
     protected $action;
@@ -23,13 +23,36 @@ class AssetController extends ApiController {
      * @return string
      */
     public function getAction($request) {
-        if(isset($request->url_elements[2])) {
+        if(isset($request->url_elements[2]) && isset($request->url_elements[3])) {
 
-            $action = $request->url_elements[2];
-
-            switch ($action) {
-                case 'user':
-                    $this->response = $this->model->getModel($action);
+        	$url = new URLFragments();
+        	$url->action = $request->url_elements[2];
+        	$url->campuscode = $request->url_elements[3];
+        	
+            switch ($url->action) {
+                case 'goals':
+                    $this->response = $this->model->getModel($url);
+                    break;
+                case 'ftf_4yr':
+                    $this->response = $this->model->getModel($url);
+                    break;
+                case 'ftf_6yr':
+                    $this->response = $this->model->getModel($url);
+                    break;
+                case 'tr_2yr':
+                    $this->response = $this->model->getModel($url);
+                    break;
+                case 'tr_2yr':
+                    $this->response = $this->model->getModel($url);
+                    break;
+                case 'tr_4yr':
+                    $this->response = $this->model->getModel($url);
+                    break;
+                case 'pell':
+                    $this->response = $this->model->getModel($url);
+                    break;
+                case 'urm':
+                    $this->response = $this->model->getModel($url);
                     break;
                 default:
                     header('HTTP/1.1 400 Bad Request');
@@ -37,6 +60,9 @@ class AssetController extends ApiController {
                     break;
             }
 
+        } else {
+        	header('HTTP/1.1 400 Bad Request');
+        	header('Content-Type: text/plain');	
         }
         return $this->response;
     }
@@ -70,5 +96,10 @@ class AssetController extends ApiController {
         }
         return $this->response;
     }
+}
+
+class URLFragments {
+	public $action;
+	public $campuscode;
 }
 
